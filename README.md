@@ -1,4 +1,4 @@
-# AI ATL Hackathon
+# Receipt-Able - AI ATL Hackathon
 
 The project is for submission to AI ATL Hackathon
 
@@ -10,12 +10,12 @@ Submitted by: **Han Lee**
  
 ## Video Walkthrough
 
-Here's a walkthrough of implemented user stories:
+Here's a walkthrough of implemented user stories: https://imgur.com/gallery/8iY3LQZ
 
 <img src='https://imgur.com/gallery/8iY3LQZ' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
-GIF created with ... LiceCap  
+GIF created with ... ScreenToGif  
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
 [ScreenToGif](https://www.screentogif.com/) for Windows
