@@ -1,0 +1,185 @@
+
+p {
+    font-size: 20px;
+    margin: 0px;
+}
+
+h1 {
+    color:azure;
+    margin: 0px;
+}
+
+/* Text of profile information */
+.profile-info{
+
+    font-style:italic;
+    text-align: left;
+
+}
+
+/* Empty Spacing */
+.emptyDiv {
+    height: 30px;
+}
+
+.emptyItemDiv{
+    height: 100px;
+}
+
+.css-1cpxqw2{
+    color: purple;
+}
+
+
+/* Multicolor bar at top */
+.css-1dp5vir{
+    background-image: linear-gradient(90deg, hsl(165, 70%, 42%), hsl(165, 70%, 42%));
+}
+
+/* Nav bar pages font */
+.css-uc76bn {
+    font-size: 26px;
+    text-align: center;
+}
+
+/* Tabs for login */
+.st-ch {
+    font-size: 26px;
+    margin-left: 14px;
+    margin-right: 14px;
+}
+
+/* Streamlit container for body block */
+.block-container{
+    padding-bottom: 0px;
+}
+
+.footer-div{
+    
+   margin-top: 25%;
+   text-align: center;
+    
+}
+
+
+.reference-repo{
+    display: inline;
+}
+
+.footer-link{
+    color:#EAF6F6;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.css-1q1n0ol{
+    max-width: 1500px;
+}
+
+.p{
+    text-align: center;
+}
+
+.image{
+
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15%;
+}
+
+.On-thehouse{
+    font-family: 'Fasthand', cursive;
+    font-family: 'Poiret One', cursive;
+    font-size: 75px;
+    display: flex;
+    justify-content: center;
+}
+
+.css-10trblm{
+    margin: 0px;
+}
+
+.our-app{
+    text-align: center;
+    margin: auto;
+}
+
+.app-div {
+    margin-bottom: 25%;
+}
+
+.pages-div{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3%;
+}
+
+
+.page-headings{
+    font-size: 50px;
+    font-family: 'Dosis', sans-serif;
+}
+
+.descriptions{
+    font-size: 30px;
+    margin-bottom: 10%;
+}
+
+.css-12oz5g7{
+
+    max-width: 70%;
+  
+}
+
+.css-10xlvwk, .css-sr0wd7{
+
+    width: 17rem;
+}
+
+.itemInfo{
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Dosis', sans-serif;
+
+}
+
+.itemHead, .titleHead{
+    font-weight: bold;
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Dosis', sans-serif;
+}
+
+.css-10trblm{
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    word-break: break-word;
+
+}
+
+.leftblock{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+.profName{
+    padding-top: 10%;
+    text-align: center;
+}
+
+.no-items{
+    text-align: center;
+    color: white;
+    font-size: 28px;
+}
+
+.leaderboard{
+    text-align: center;
+    color:white;
+}
