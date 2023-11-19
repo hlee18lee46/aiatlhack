@@ -241,14 +241,15 @@ def insertData(image_path, email):
             itemID = numbers[0]
             price = numbers[1]
             itemDesc = line[:line.find(itemID)-1]
+            transdate = month + '/' + day + '/' + year
             itemID = int(itemID)
             price = float(price)
             print('price:',price)
             print('itemID:',itemID)
             print('itemDesc:',itemDesc)
-            addTrans(receiptID, email, itemID, itemDesc, price)
+            addTrans(receiptID, email, itemID, itemDesc, transdate, price)
 
-def addTrans(receiptID: int, email: str, itemID: int, itemDesc: str, price: float) -> str:
+def addTrans(receiptID: int, email: str, itemID: int, itemDesc: str, transdate: str, price: float) -> str:
     try:
         connection = mysql.connector.connect(
         host="localhost",
@@ -266,19 +267,22 @@ def addTrans(receiptID: int, email: str, itemID: int, itemDesc: str, price: floa
 
     try:
         print("db3")
-        select_stmt = "INSERT INTO trans (receiptID, email, itemID, itemDesc, price) VALUES (%s, %s, %s, %s, %s)"
+        select_stmt = "INSERT INTO trans (receiptID, email, itemID, itemDesc, transdate, price) VALUES (%s, %s, %s, %s, %s)"
         print("db4")
-        print(type(receiptID), receiptID)
-        print(type(email), email)
-        print(type(itemID), itemID)
-        print(type(itemDesc), itemDesc)
-        print(type(price), price)
+        st.write('Streamlined Data\n')
+        st.write((type(receiptID), receiptID))
+        st.write((type(email), email))
+        st.write((type(itemID), itemID))
+        st.write((type(itemDesc), itemDesc))
+        st.write((type(price), price))
+        st.write((type(transdate), transdate))
         receiptID=str(receiptID)
         email=str(email)
         itemID=str(itemID)
         itemDesc=str(itemDesc)
         price=str(price)
-        cur.execute(select_stmt, (receiptID, email, itemID, itemDesc, price))
+        #transdate=str(transdate)
+        cur.execute(select_stmt, (receiptID, email, itemID, itemDesc, transdate, price))
         print("db5")
         connection.commit()
         print("db6")
@@ -287,4 +291,26 @@ def addTrans(receiptID: int, email: str, itemID: int, itemDesc: str, price: floa
         output = "Unsuccessful"  
     cur.close()  
     connection.close()
+def whobuy(item):
+    try:
+        connection = mysql.connector.connect(
+        host="localhost",
+        user="root",
+        password="DlGkS!2#4%",
+        database="mydb"
+        )
+        print("Connected to database")
 
+    except:
+        print("Was not able to connect to the database.")
+    cur = connection.cursor()
+    try:
+        select_stmt = "select * from trans where itemDesc = %s"
+        cur.execute(select_stmt, item)
+        output = cur.fetchall()
+        #output = "Added user into database"
+    except:
+        output = "Unsuccessful"  
+    cur.close()  
+    connection.close()
+    return output

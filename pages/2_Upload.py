@@ -17,9 +17,9 @@ def main():
         st.title("Please login.")
      """
 
-    st.title("Image Uploader")
+    st.title("Receipt Uploader")
 
-    uploaded_file = st.file_uploader("Choose an image...", type="jpg")
+    uploaded_file = st.file_uploader("", type="jpg")
 
     if uploaded_file is not None:
         st.image(uploaded_file, caption="Uploaded Image.", use_column_width=True)
@@ -28,16 +28,11 @@ def main():
 
         # Save the uploaded image
         saved_path = save_uploaded_file(uploaded_file)
-        st.write(f"Image saved at: {saved_path}")
+        #st.write(f"Image saved at: {saved_path}")
 
         db.insertData(saved_path, 'test123@gmail.com')
 
         if st.button('Show Raw Text'):
-            # Code to execute when the button is clicked
-            st.write('Converted to Text')
-            st.write(db.imgToText(saved_path))
-            #db.addTrans(1,'1',1,'1',1)
-        if st.button('Streamlined Data'):
             # Code to execute when the button is clicked
             st.write('Converted to Text')
             st.write(db.imgToText(saved_path))

@@ -36,7 +36,7 @@ def get_current_location(api_key):
         else:
             print(f"Error: Request failed with status code {response.status_code}")
             print(response.text)  # Print the response content for further analysis
-        # Sleep for 5 minutes
+        # Sleep for 50 minutes
         time.sleep(3000)
     except Exception as e:
         print(f"Error: {e}")
@@ -81,6 +81,10 @@ def main():
                 st.map(map_data, zoom=12)
             else:
                 st.warning("No Walmart locations found.")
+        if st.button("Show Insights"):
+            st.write('somebody purchased SALONPAS for 13.99 on 11/18/2023')
+            st.write('somebody purchased IBERIA GUAV for 0.99 on 11/19/2023')
+
 
 if "user" not in st.experimental_get_query_params():
     st.experimental_set_query_params(user="no")

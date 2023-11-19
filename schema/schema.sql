@@ -7,11 +7,12 @@ password varchar(255),
 primary key(email)
 );
 create table trans(
-receiptID int, 
+receiptID varchar(255), 
 email varchar(255),
-itemID int, 
+itemID varchar(255), 
 itemDesc varchar(255),
-price numeric(10, 2),
+transdate varchar(255),
+price varchar(255),
 primary key(receiptID)
 );
 create table store(
